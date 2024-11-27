@@ -72,7 +72,7 @@ export const projects = [
     textFields: [
       {
         type: "p",
-        text: "A website for managing team projects. You can add any member, add them assignments or let them add their own. Members can write their notes/instructions to each of their assignments, which can only be accessed by them and the project owner.",
+        text: "A website for managing team projects. You can add members, give them assignments or let them add their own. Members can write their notes/instructions to each of their assignments, which can only be accessed by them and the project owner.",
       },
       {
         type: "p",
@@ -204,7 +204,7 @@ export const projects = [
     textFields: [
       {
         type: "p",
-        text: "A social networking as well as content sharing website, a twitter child or my humble attempt to remake it. You can post, reply, share, like and follow people. Notification system is included.",
+        text: "A content sharing website, a twitter child 😗. You can post, reply, share, like and follow people. Notification system is included.",
       },
       {
         type: "p",
