@@ -239,7 +239,7 @@ export const projects = [
       },
       {
         type: "a",
-        text: `Join`,
+        text: `Visit Website`,
         href: "https://hopin.herokuapp.com/",
       },
     ],
@@ -339,6 +339,10 @@ export const projects = [
         type: "tags",
         header: "Backend",
         listItems: ["Node.js", "express", "Socket.Io"],
+      },
+      {
+        type: "h2",
+        text: `Notes:`,
       },
       {
         type: "p",
