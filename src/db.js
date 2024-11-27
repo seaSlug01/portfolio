@@ -239,7 +239,7 @@ export const projects = [
       },
       {
         type: "a",
-        text: `Visit Website`,
+        text: `Join`,
         href: "https://hopin.herokuapp.com/",
       },
     ],
@@ -346,7 +346,7 @@ export const projects = [
       },
       {
         type: "a",
-        text: `Visit Website`,
+        text: `Chit Chat ;)`,
         href: "https://hopin.herokuapp.com/messages",
       },
     ],
