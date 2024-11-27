@@ -198,13 +198,13 @@ export const projects = [
       },
     ],
     heading: {
-      text: "Twitter Clone",
+      text: "HopIn",
       color: "violet",
     },
     textFields: [
       {
         type: "p",
-        text: "A posting website as we all probably know, my poor attempt to remake it. You can post, reply, share, like and follow people. Notification system is included.",
+        text: "A social networking as well as content sharing website, a twitter child or my humble attempt to remake it. You can post, reply, share, like and follow people. Notification system is included.",
       },
       {
         type: "p",
@@ -212,7 +212,7 @@ export const projects = [
       },
       {
         type: "h2",
-        text: `Technologies used:`,
+        text: `Stack:`,
       },
       {
         type: "tags",
@@ -313,7 +313,7 @@ export const projects = [
       },
     ],
     heading: {
-      text: "Messenger Clone",
+      text: "HopIn Chat",
       color: "orange",
     },
     textFields: [
@@ -323,12 +323,12 @@ export const projects = [
       },
       {
         type: "h2",
-        text: `Technologies used:`,
+        text: `Langs used:`,
       },
       {
         type: "tags",
         header: "Frontend",
-        listItems: ["ejs"],
+        listItems: ["jade"],
       },
       {
         type: "tags",
@@ -339,14 +339,6 @@ export const projects = [
         type: "tags",
         header: "Backend",
         listItems: ["Node.js", "express", "Socket.Io"],
-      },
-      {
-        type: "h2",
-        text: `Notes:`,
-      },
-      {
-        type: "p",
-        text: "Although MC is part of the Twitter Clone, they've been split to two since they're different in many ways (but also identical in others).",
       },
       {
         type: "p",
