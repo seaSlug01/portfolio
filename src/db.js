@@ -217,7 +217,7 @@ export const projects = [
       {
         type: "tags",
         header: "Frontend",
-        listItems: ["Pug template engine"],
+        listItems: ["jade"],
       },
       {
         type: "tags",
@@ -328,7 +328,7 @@ export const projects = [
       {
         type: "tags",
         header: "Frontend",
-        listItems: ["Pug template engine"],
+        listItems: ["ejs"],
       },
       {
         type: "tags",
