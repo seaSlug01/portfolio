@@ -351,7 +351,7 @@ export const projects = [
       {
         type: "a",
         text: `Chit Chat ;)`,
-        href: "https://hopin.herokuapp.com/messages",
+        href: "https://hopin-gpe5bygkgwcxe0b3.germanywestcentral-01.azurewebsites.net/messages",
       },
     ],
   },
