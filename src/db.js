@@ -240,7 +240,7 @@ export const projects = [
       {
         type: "a",
         text: `Visit Website`,
-        href: "https://hopin.herokuapp.com/",
+        href: "https://hopin-gpe5bygkgwcxe0b3.germanywestcentral-01.azurewebsites.net",
       },
     ],
   },
