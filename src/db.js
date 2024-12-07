@@ -238,6 +238,10 @@ export const projects = [
         text: "If you're using Chrome or Mozilla and want to take a peak, an already registered account is pre-populated in the login form.",
       },
       {
+        type: "p",
+        text: "Initial(first) loading of the page may take awhile, since I'm currently using a free hosting service. After the first load, it runs fine.",
+      },
+      {
         type: "a",
         text: `Visit Website`,
         href: "https://hopin-gpe5bygkgwcxe0b3.germanywestcentral-01.azurewebsites.net",
@@ -347,6 +351,10 @@ export const projects = [
       {
         type: "p",
         text: "If you're using Chrome or Mozilla and want to take a peak, an already registered account is pre-populated in the login form.",
+      },
+      {
+        type: "p",
+        text: "Initial (first) loading of the page may take awhile, since I'm currently using a free hosting service.",
       },
       {
         type: "a",
