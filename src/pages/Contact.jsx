@@ -2,7 +2,8 @@ import React, { Fragment } from "react"
 import { useSelector } from "react-redux"
 import styled from "styled-components"
 import ContactForm from "../layouts/ContactForm"
-import illustration from "../assets/undraw_personal_text_re_vqj3.svg"
+import illustration_theme_dark from "../assets/undraw_personal_text_re_vqj3_orange.svg"
+import illustration_theme_light from "../assets/undraw_personal_text_re_vqj3.svg"
 
 function Contact(props) {
   const isModal = useSelector(
@@ -35,7 +36,13 @@ function Contact(props) {
       </Container>
       {!isModal && (
         <Container className="aint-modal">
-          <img src={illustration} />
+          <img
+            src={
+              theme !== "dark"
+                ? illustration_theme_light
+                : illustration_theme_dark
+            }
+          />
         </Container>
       )}
     </WrapperComponent>
