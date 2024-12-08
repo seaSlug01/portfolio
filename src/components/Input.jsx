@@ -48,7 +48,6 @@ function Input({
           name={name}
           placeholder={placeholder}
           onKeyUp={throttle((e) => {
-            console.log("dafuq?")
             setLetters(e, dispatch)
           }, 100)}
           autoComplete="off"

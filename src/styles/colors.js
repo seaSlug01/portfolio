@@ -39,3 +39,14 @@ export const LogoLetters = {
   dark: "#f3f3f3",
   light: "#404040",
 }
+
+export const FormIllustrationColors = {
+  dark: {
+    valid: "#ffa787",
+    invalid: "#FFC3AD",
+  },
+  light: {
+    valid: "#74CCFF",
+    invalid: "#BEBEFF",
+  },
+}

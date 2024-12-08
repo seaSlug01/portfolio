@@ -2,6 +2,8 @@ import React, { Fragment } from "react"
 import { useSelector } from "react-redux"
 import styled from "styled-components"
 import ContactForm from "../layouts/ContactForm"
+import { FormValidityProvider } from "../context/ContactFormValidity"
+import IllustrationContactForm from "../components/IllustrationContactForm"
 import illustration_theme_dark from "../assets/undraw_personal_text_re_vqj3_orange.svg"
 import illustration_theme_light from "../assets/undraw_personal_text_re_vqj3.svg"
 
@@ -19,32 +21,28 @@ function Contact(props) {
 
   return (
     <WrapperComponent>
-      <Container {...props} className={isModal ? "portal-form" : undefined}>
-        <Header theme={theme}>
-          <Con theme={theme}>
-            <span>CON</span>
-            <Shadow background={theme === "dark" ? "#f9f9f9" : "#1a1a1a"} />
-          </Con>
-          <Con>
-            <span>TACT me.</span>
-            <Shadow
-              background={theme === "dark" ? "rgb(50, 50, 50)" : "#f9f9f9"}
-            />
-          </Con>
-        </Header>
-        <ContactForm isModal={isModal} theme={theme} />
-      </Container>
-      {!isModal && (
-        <Container className="aint-modal">
-          <img
-            src={
-              theme !== "dark"
-                ? illustration_theme_light
-                : illustration_theme_dark
-            }
-          />
+      <FormValidityProvider>
+        <Container {...props} className={isModal ? "portal-form" : undefined}>
+          <Header theme={theme}>
+            <Con theme={theme}>
+              <span>CON</span>
+              <Shadow background={theme === "dark" ? "#f9f9f9" : "#1a1a1a"} />
+            </Con>
+            <Con>
+              <span>TACT me.</span>
+              <Shadow
+                background={theme === "dark" ? "rgb(50, 50, 50)" : "#f9f9f9"}
+              />
+            </Con>
+          </Header>
+          <ContactForm isModal={isModal} theme={theme} />
         </Container>
-      )}
+        {!isModal && (
+          <Container className="aint-modal">
+            <IllustrationContactForm theme={theme} />
+          </Container>
+        )}
+      </FormValidityProvider>
     </WrapperComponent>
   )
 }
@@ -132,7 +130,8 @@ const Container = styled.div`
     padding-inline: 0;
     align-items: center;
 
-    img {
+    img,
+    svg {
       width: 50%;
       height: 50%;
       object-fit: contain;

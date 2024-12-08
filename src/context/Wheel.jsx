@@ -8,8 +8,6 @@ export const WheelContext = createContext({
 export function WheelContextProvider({ children }) {
   const [color, setColor] = useState("blue")
 
-  console.log(color)
-
   return (
     <WheelContext.Provider value={{ color, setColor }}>
       {children}

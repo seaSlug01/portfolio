@@ -1,5 +1,6 @@
-import React, { useRef, useState } from "react"
+import React, { useRef, useState, useEffect } from "react"
 import styled from "styled-components"
+import { useFormValidity } from "../context/ContactFormValidity"
 import Input from "../components/Input"
 import Textarea from "../components/Textarea"
 import FlyingLetters from "../components/FlyingLetters"
@@ -8,6 +9,7 @@ import SubmitButton from "../components/SubmitButton"
 import { object, string } from "yup"
 import { Formik } from "formik"
 import emailjs from "@emailjs/browser"
+import FormikWithValidation from "../components/FormikWithValidation"
 
 import { MdOutlineEmail } from "react-icons/md"
 import { BsFillPersonFill } from "react-icons/bs"
@@ -51,6 +53,7 @@ const FormFields = [
 
 function ContactForm({ isModal, theme }) {
   const formRef = useRef()
+  const { setIsFormValid } = useFormValidity()
 
   const [submitMessage, setSubmitMessage] = useState({
     message: "",
@@ -102,7 +105,7 @@ function ContactForm({ isModal, theme }) {
   return (
     <>
       <FlyingLetters theme={theme} />
-      <Formik
+      <FormikWithValidation
         initialValues={initialFormValues}
         validationSchema={EmailSchema}
         onSubmit={submitForm}
@@ -119,6 +122,10 @@ function ContactForm({ isModal, theme }) {
             dirty,
             isSubmitting,
           } = formik
+
+          // useEffect(() => {
+          //   setIsFormValid(isValid && dirty)
+          // }, [isValid, dirty, setIsFormValid])
 
           return (
             <Form onSubmit={handleSubmit} ref={formRef}>
@@ -156,7 +163,7 @@ function ContactForm({ isModal, theme }) {
             </Form>
           )
         }}
-      </Formik>
+      </FormikWithValidation>
     </>
   )
 }
