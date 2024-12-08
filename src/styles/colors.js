@@ -40,13 +40,40 @@ export const LogoLetters = {
   light: "#404040",
 }
 
+// "#ffa787"
+// "#FFC3AD"
+
 export const FormIllustrationColors = {
   dark: {
-    valid: "#ffa787",
-    invalid: "#FFC3AD",
+    valid: {
+      main: "#ffa787",
+      smoke: "#5e5e5e",
+      smokeDivider: "#ffd7c9",
+      ground: "white",
+      hair: "white",
+    },
+    invalid: {
+      main: "#FFC3AD",
+      smoke: "#5e5e5e",
+      smokeDivider: "#ffd7c9",
+      ground: "white",
+      hair: "white",
+    },
   },
   light: {
-    valid: "#74CCFF",
-    invalid: "#BEBEFF",
+    valid: {
+      main: "#74CCFF",
+      smoke: "#f59d7e",
+      smokeDivider: "#ffd7c9",
+      ground: "#3f3d56",
+      hair: "#2f2e41",
+    },
+    invalid: {
+      main: "#BEBEFF",
+      smoke: "#ffb69d",
+      smokeDivider: "#ffd7c9",
+      ground: "#3f3d56",
+      hair: "#2f2e41",
+    },
   },
 }
