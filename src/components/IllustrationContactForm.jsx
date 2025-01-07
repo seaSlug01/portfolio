@@ -4,9 +4,6 @@ import { useFormValidity } from "../context/ContactFormValidity"
 import { FormIllustrationColors } from "../styles/colors"
 
 const IllustrationContactForm = ({ theme }) => {
-  //{color}or className="fillable", this is what should change based on theme and valid form
-  // You need to find a way to make the formState be accessile backwards on the parent, context or redux(but context most likely)
-
   const { isFormValid } = useFormValidity()
   const [colorPallete, setColorPalette] = useState(
     FormIllustrationColors[theme][isFormValid ? "valid" : "invalid"]
@@ -18,7 +15,7 @@ const IllustrationContactForm = ({ theme }) => {
     )
   }, [isFormValid, setColorPalette, FormIllustrationColors, theme])
   return (
-    <SVGWrapper
+    <SVGTag
       xmlns="http://www.w3.org/2000/svg"
       data-name="Layer 1"
       width="842.72998"
@@ -149,14 +146,14 @@ const IllustrationContactForm = ({ theme }) => {
         transform="translate(-178.63501 -163.5)"
         fill={colorPallete.ground}
       />
-    </SVGWrapper>
+    </SVGTag>
   )
 }
 
 export default IllustrationContactForm
 
-const SVGWrapper = styled.svg`
+const SVGTag = styled.svg`
   path {
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
   }
 `

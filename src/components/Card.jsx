@@ -1,20 +1,24 @@
-import React from 'react'
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
-import LearnMoreButton from './LearnMoreButton';
-import {randomHeadingColor} from "../utils/utils";
-import { ColorHeading } from '../styles/reusableStyles';
+import LearnMoreButton from "./LearnMoreButton"
+import { randomHeadingColor } from "../utils/utils"
+import { ColorHeading } from "../styles/reusableStyles"
 
-function Card({image, heading, details, theme}) {
+function Card({ image, heading, details, theme }) {
   return (
     <Container theme={theme}>
       <Image src={image} alt={heading} />
       <div className="text">
-        <ColorHeading className={heading.color || randomHeadingColor()} theme={theme}>{heading.text}</ColorHeading>
-          <p>{details.text}</p>
+        <ColorHeading
+          className={heading.color || randomHeadingColor()}
+          theme={theme}
+        >
+          {heading.text}
+        </ColorHeading>
+        <p>{details.text}</p>
         <LearnMoreButton text="Learn more" tabIndex={-1} />
       </div>
-      
     </Container>
   )
 }
@@ -25,12 +29,19 @@ const Container = styled.div`
   padding: 0.8rem;
   border-radius: 1rem;
   width: 19rem;
-  background: ${props => props.theme === "dark" ? "rgb(64 64 64)" : "#262626"};;
-  box-shadow: ${props => props.theme === "dark" ? "0 20px 40px #202020" : "rgb(139, 139, 139) 0px 5px 10px" };
+  background: ${(props) =>
+    props.theme === "dark" ? "rgb(64 64 64)" : "#262626"};
+  box-shadow: ${(props) =>
+    props.theme === "dark"
+      ? "0 20px 40px #202020"
+      : "rgb(139, 139, 139) 0px 5px 10px"};
   transition: box-shadow 0.3s ease;
 
   &:hover {
-    box-shadow: ${props => props.theme === "dark" ? "0 20px 40px #202020" : "10px 10px 10px #8b8b8b" };
+    box-shadow: ${(props) =>
+      props.theme === "dark"
+        ? "0 20px 40px #202020"
+        : "10px 10px 10px #8b8b8b"};
   }
 
   button {
@@ -58,14 +69,14 @@ const Container = styled.div`
     }
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
   }
-`;
+`
 
 const Image = styled.img`
   max-width: 100%;
   height: 14rem;
   border-radius: 0.5rem;
   object-fit: cover;
-`;
+`
